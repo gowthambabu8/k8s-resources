@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: service
 spec:
-  type: Nodeport
+  type: NodePort
   selector:
     # labels are used for selector
     project: roboshop1
