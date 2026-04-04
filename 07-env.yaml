@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: environmental variables
+  name: environmental-variables
   labels: 
     project: roboshop1
     env: dev
