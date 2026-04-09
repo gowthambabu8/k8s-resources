@@ -6,6 +6,8 @@ metadata:
     project: roboshop
     purpose: poc
     component: frontend
+  annotation:
+    kuberantes.io/change-cause: "moveing to 1.9"
 spec: 
   replicas: 1
   selector:
@@ -23,4 +25,4 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx:1.9
