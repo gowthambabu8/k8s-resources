@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: replicaset
+  labels:
+    project: roboshop
+    purpose: poc
+    component: frontend
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      project: roboshop
+      purpose: poc
+      component: frontend
+  template:
+    metadata:
+      name: nginx
+      labels:
+        project: roboshop
+        purpose: poc
+        component: frontend
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable-alpine3.23-per1
