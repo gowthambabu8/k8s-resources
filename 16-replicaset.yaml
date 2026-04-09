@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: replicaset
+  labels:
+    project: roboshop
+    purpose: poc
+    component: frontend
+spec: 
+  replicas: 1
+  selectors:
+    matchLabels:
+      project: roboshop
+      purpose: poc
+      component: frontend
+  template:
+    metadata:
+      name: nginx
+      labels:
+        project: roboshop
+        purpose: poc
+        component: frontend
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
